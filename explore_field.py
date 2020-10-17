@@ -17,7 +17,9 @@ def explore_field(p_field):
     This function explores an entire field by calling the explore_tile
     function for each tile in the field.
     """
-
+    for i in range(len(p_field)):
+        for j in range(len(p_field[i])):
+            explore_tile(p_field[i][j], j, i)
 field = [
     [" ", "s", " ", " ", "m"],
     [" ", "d", "@", "d", " "],
